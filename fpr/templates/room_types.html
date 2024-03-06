@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    Список типов номеров
+{% endblock %}
+
+{% block content %}
+    <h1>Список типов номеров</h1>
+    <ul>
+        {% for room_type in room_types %}
+            <li><a href="{% url 'room_type_details' room_type.id %}">{{ room_type.name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Детали отеля</title>
+</head>
+<body>
+    <h1>{{ hotel.name }}</h1>
+    <p>Адрес: {{ hotel.address }}</p>
+    <p>Телефон: {{ hotel.phone }}</p>
+    <p>Email: {{ hotel.email }}</p>
+
+    <a href="{% url 'room_type_list' %}?hotel_id={{ hotel.id }}">Список номеров</a>
+</body>
+</html>
